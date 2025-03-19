@@ -1,0 +1,513 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 作业3: 数据分析与可视化\n",
+    "\n",
+    "本次作业将练习数据分析和可视化的操作。通过这些练习，你将掌握如何对清洗后的数据进行分析和可视化，以便更好地理解数据中隐藏的信息。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 1. 导入必要的库\n",
+    "\n",
+    "首先，我们需要导入以下库：\n",
+    "- pandas：用于数据处理\n",
+    "- matplotlib：用于基础可视化\n",
+    "- seaborn：用于高级可视化\n",
+    "- numpy：用于数值计算"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 导入必要的库\n",
+    "# 在此处完成代码\n",
+    "import pandas as pd\n",
+    "import matplotlib.pyplot as plt\n",
+    "import seaborn as sns\n",
+    "import numpy as np\n",
+    "\n",
+    "# 设置中文显示\n",
+    "import matplotlib as mpl\n",
+    "mpl.rcParams['font.sans-serif'] = ['SimHei']\n",
+    "mpl.rcParams['axes.unicode_minus'] = False\n",
+    "\n",
+    "# 设置seaborn风格\n",
+    "sns.set(style=\"whitegrid\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 2. 读取数据文件\n",
+    "\n",
+    "我们依然使用`data\\猫鸭账单_2025年.csv`文件，读取后进行必要的预处理。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 读取CSV文件\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 3. 数据预处理\n",
+    "\n",
+    "在进行分析和可视化之前，我们需要做一些必要的预处理，例如：\n",
+    "1. 将\"流水\"列转换为数值类型\n",
+    "2. 将\"日期\"列转换为日期时间类型\n",
+    "3. 提取月份信息"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 清洗\"流水\"列，移除¥符号和千位分隔符\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 将\"日期\"列转换为日期时间类型\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 提取月份信息\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 4. 描述性统计分析\n",
+    "\n",
+    "现在，让我们进行一些描述性统计分析，以便更好地理解数据。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 查看数值列的统计摘要\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 分组统计：按收支类型统计流水总额\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 分组统计：按月份统计收支情况\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 分组统计：按分类统计支出情况\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 5. 基础可视化：柱状图\n",
+    "\n",
+    "让我们使用柱状图来可视化一些数据，例如每个月的收支情况。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 创建一个包含每个月收支情况的DataFrame\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 使用matplotlib绘制柱状图显示每个月的收支情况\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 6. 基础可视化：饼图\n",
+    "\n",
+    "饼图适合显示部分与整体的关系，让我们用饼图来可视化支出的分类情况。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 筛选出所有支出记录\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 按分类统计支出金额\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 使用matplotlib绘制饼图显示各分类的支出占比\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 7. 基础可视化：折线图\n",
+    "\n",
+    "折线图适合显示数据随时间的变化趋势，让我们用折线图来可视化每个月的收入和支出的变化。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 按月份统计收入和支出\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 使用matplotlib绘制折线图显示收入和支出随时间的变化\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 8. 使用Seaborn进行高级可视化\n",
+    "\n",
+    "Seaborn是基于matplotlib的高级可视化库，可以创建更美观、更信息丰富的图表。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 使用Seaborn的barplot绘制每个月的收支情况\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 使用Seaborn的boxplot绘制不同分类的支出金额分布\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 使用Seaborn的heatmap绘制相关性矩阵\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 9. 高级分析：趋势和季节性\n",
+    "\n",
+    "让我们分析收支数据是否具有某种趋势或季节性。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 按日期统计每日的收入和支出\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 使用移动平均线来平滑数据，以便观察趋势\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 绘制原始数据和移动平均线\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 10. 高级分析：异常检测\n",
+    "\n",
+    "让我们尝试使用统计方法来检测支出中的异常值。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 筛选出所有支出记录\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 使用Z分数法检测异常值\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 可视化异常值\n",
+    "# 在此处完成代码\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 11. 创建交互式仪表板（选做）\n",
+    "\n",
+    "如果有兴趣，你可以尝试使用Jupyter的交互式小部件来创建一个简单的仪表板，以便更灵活地探索数据。\n",
+    "\n",
+    "首先，我们需要导入ipywidgets库。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 尝试导入ipywidgets，如果没有安装，你可能需要运行：!pip install ipywidgets\n",
+    "try:\n",
+    "    import ipywidgets as widgets\n",
+    "    from IPython.display import display\n",
+    "    widgets_available = True\n",
+    "except ImportError:\n",
+    "    print(\"ipywidgets模块未安装，请运行：!pip install ipywidgets\")\n",
+    "    widgets_available = False"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 如果ipywidgets可用，创建一个简单的交互式仪表板\n",
+    "if widgets_available:\n",
+    "    # 创建下拉菜单，用于选择月份\n",
+    "    # 在此处完成代码\n",
+    "    \n",
+    "    # 创建下拉菜单，用于选择分类\n",
+    "    # 在此处完成代码\n",
+    "    \n",
+    "    # 创建一个交互式函数，根据选择的月份和分类来显示数据\n",
+    "    # 在此处完成代码\n",
+    "    \n",
+    "    # 显示交互式控件\n",
+    "    # 在此处完成代码\n",
+    "else:\n",
+    "    print(\"无法创建交互式仪表板，因为ipywidgets模块未安装。\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 12. 数据分析报告\n",
+    "\n",
+    "最后，让我们根据以上的分析结果，编写一个简短的数据分析报告。\n",
+    "\n",
+    "在实际工作中，数据分析报告是非常重要的，它可以帮助你向他人清晰地传达你的发现和见解。报告通常包括以下内容：\n",
+    "1. 背景和目标\n",
+    "2. 数据概览\n",
+    "3. 分析方法\n",
+    "4. 主要发现\n",
+    "5. 结论和建议\n",
+    "\n",
+    "下面是一个简单的模板，你可以根据实际情况进行填写。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 数据分析报告：猫鸭2025年账单分析\n",
+    "\n",
+    "#### 1. 背景和目标\n",
+    "\n",
+    "背景：[填写背景信息]\n",
+    "\n",
+    "目标：[填写分析目标]\n",
+    "\n",
+    "#### 2. 数据概览\n",
+    "\n",
+    "[填写数据的基本信息，如记录数量、时间范围、主要字段等]\n",
+    "\n",
+    "#### 3. 分析方法\n",
+    "\n",
+    "[填写使用的分析方法和工具]\n",
+    "\n",
+    "#### 4. 主要发现\n",
+    "\n",
+    "##### 4.1 收支总体情况\n",
+    "\n",
+    "[填写收支总体情况的分析结果]\n",
+    "\n",
+    "##### 4.2 月度收支趋势\n",
+    "\n",
+    "[填写月度收支趋势的分析结果]\n",
+    "\n",
+    "##### 4.3 支出分类分析\n",
+    "\n",
+    "[填写支出分类分析的结果]\n",
+    "\n",
+    "##### 4.4 异常支出分析\n",
+    "\n",
+    "[填写异常支出分析的结果]\n",
+    "\n",
+    "#### 5. 结论和建议\n",
+    "\n",
+    "[根据分析结果，提出结论和建议]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 完成！\n",
+    "\n",
+    "恭喜你完成了第三次作业！通过这次作业，你应该已经掌握了如何对数据进行分析和可视化，包括描述性统计、各种图表的绘制、趋势分析、异常检测等。这些都是数据分析的重要技能，将帮助你从数据中提取有价值的信息和见解。"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+} 
